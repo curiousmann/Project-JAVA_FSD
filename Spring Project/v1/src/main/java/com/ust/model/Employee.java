@@ -16,7 +16,7 @@ public class Employee {
 
 	@Id 
  	@GeneratedValue  			
- 	private Integer EmpId;  //test		
+ 	private Integer EmpId;  //test
 	@NonNull 
  	private String EmpAtt;  			 			
 	@NonNull 
