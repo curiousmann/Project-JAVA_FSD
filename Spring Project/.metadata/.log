@@ -107,3 +107,54 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2022-03-09 11:55:51.236
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:56:47.309
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:56:47.311
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@45f8566d[org.springframework.tooling.boot.ls:1.29.0.202112031705(id=564)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:56:47.380
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:56:47.991
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:57:02.392
+!MESSAGE Boot LS startup time from start to initialized: 14998ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:57:02.839
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.eCAWEPbqisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:57:02.869
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:57:02.903
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:57:02.905
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:57:02.906
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.eCAWEPbq => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:57:02.907
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:57:02.925
+!MESSAGE classpath=92 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:57:02.937
+!MESSAGE buffering callback sts4.classpath.eCAWEPbq v1 false 92
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:57:02.942
+!MESSAGE executing callback sts4.classpath.eCAWEPbq 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-09 11:57:04.282
+!MESSAGE executing callback sts4.classpath.eCAWEPbq SUCCESS [done]
+
+!ENTRY org.eclipse.equinox.security 1 0 2022-03-09 11:59:17.118
+!MESSAGE New keyring password generated. 
