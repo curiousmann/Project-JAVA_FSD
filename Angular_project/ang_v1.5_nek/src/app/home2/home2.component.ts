@@ -19,14 +19,12 @@ export class Home2Component implements OnInit {
 
 
     ship : Ship = new Ship();  
-    constructor( private route: ActivatedRoute, 
-      private router: Router,private service:ShipService) { } 
+    constructor(private service:ShipService) { } 
     
 
   checkLogin(tx1:any){
     this.service.getOneShip(this.userId).subscribe(data=>{
       this.ship=data
-      console.log(this.userId,this.password)
       console.log(this.ship)
   
       if(this.userId==this.ship.userId&&this.password==this.ship.pass){

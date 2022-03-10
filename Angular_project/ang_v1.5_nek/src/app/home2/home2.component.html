@@ -1,14 +1,24 @@
-<h1>
-    Login Component Template
-  </h1>
+<br><br>
+
+     <div class="container">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Login
+          </h3>
+        <div class="row">
+         <form action="#">
   
-  <form>
-  username : <input type="text" name="username" [(ngModel)]="userId" #t1><br>
-  Password : <input type="password" name="password" [(ngModel)]="password"><br>
-  
-  <input type="submit" value="Login" (click)="checkLogin(t1)">
-  
-  </form>
-  
-  <p [ngClass]="myClass">{{msg}}</p>
-  
+            <div class="col">
+                
+        
+                <input type="text" name="userid" placeholder="UserId" required [(ngModel)]="userId" #t1>
+                <input type="password" name="password" placeholder="Password" required [(ngModel)]="password">
+                <input type="submit" value="Login" (click)="checkLogin(t1)">
+              
+        
+            </div>
+       
+        </form>
+    </div>
+    </div>
+
+    <p [ngClass]="myClass">{{msg}}</p>

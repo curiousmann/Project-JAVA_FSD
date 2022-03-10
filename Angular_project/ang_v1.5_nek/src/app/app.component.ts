@@ -9,5 +9,5 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'demo-routing';
   constructor(private router: Router) {}
-  ngOnInit() {this.router.navigate(['/home']) } 
+  ngOnInit() {this.router.navigate(['/home/home2']) } 
 }
