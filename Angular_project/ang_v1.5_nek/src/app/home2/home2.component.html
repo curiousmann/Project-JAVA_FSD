@@ -1,1 +1,14 @@
-Home
+<h1>
+    Login Component Template
+  </h1>
+  
+  <form>
+  username : <input type="text" name="username" [(ngModel)]="userId" #t1><br>
+  Password : <input type="password" name="password" [(ngModel)]="password"><br>
+  
+  <input type="submit" value="Login" (click)="checkLogin(t1)">
+  
+  </form>
+  
+  <p [ngClass]="myClass">{{msg}}</p>
+  
