@@ -11,7 +11,7 @@ export class Home2Component implements OnInit {
   title = 'login-app';
 
 
-  userId:number=0;
+  userId:string="";
   password:string="";
   msg:string="";
   myClass:string="";
@@ -40,6 +40,7 @@ export class Home2Component implements OnInit {
   }
 
   ngOnInit(): void {
+    
   }
 
 }

@@ -2,7 +2,7 @@ export class Ship {
     email: string=""
     name: string=""
     addr: string=""
-    userId: number=0
+    userId: string=""
     empAtt: string=""
     pass: string=""
     userType: string=""
@@ -13,4 +13,6 @@ export class Ship {
     eqmtNm: string=""
     itmPrc: number=0
     pchsId: number=0
+    pep:number=0
+    god:number=0
 }
