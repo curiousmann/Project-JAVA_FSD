@@ -1,30 +1,35 @@
-<br><br><div class="container">
+<br><div class="container">
     <h3 align="center">Customer Register</h3>
     <form action="">
         <table align="center">
             <tr>
-                <td><input type="text" placeholder="Name"></td>
+                <td colspan="2"><input type="text" placeholder="Name"></td>
             </tr>
             <tr>
-                <td><input type="text" placeholder="Address" ></td>
+                <td colspan="2"><input type="text" placeholder="Address" ></td>
             </tr>
             <tr>
-                <td><input type="number" placeholder="Phone"></td>
+                <td colspan="2"><input type="number" placeholder="Phone"></td>
             </tr>
             <tr>
-                <td><input type="email" placeholder="Email" ></td>
+                <td colspan="2"><input type="email" placeholder="Email" ></td>
             </tr>
             <tr>
-                <td>Select Date and Time :<select name="" id=""></select></td>
+                <td colspan="2">Select Date and Time : &nbsp;<select name="" id=""></select></td>
+            </tr><br>
+            <tr>
+                <td>Traveller<div class="regc"> <input type="checkbox"></div>
+                </td>
+                
+                <td>Cargo<div class="regc"><input type="checkbox"></div></td>
             </tr>
             <tr>
-                 <div> Traveller<input type="checkbox" onch>Cargo<input type="checkbox"></div>
+                <td colspan="2"><input type="number" placeholder="No:of Cargo Goods"></td>
             </tr>
-            <tr>
-                <td><input type="number" placeholder="No:of Cargo Goods"></td>
-            </tr>
-            <tr><td><input type="number" placeholder="No:of Travellers"></td></tr>
+            <tr><td colspan="2"><input type="number" placeholder="No:of Travellers"></td></tr>
 
         </table>
+        <input type="submit" value="Register"/>
+      <input type="button" routerLink='/home/home2' value="cancel"/>
     </form>
 </div>

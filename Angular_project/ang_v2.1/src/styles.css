@@ -3,6 +3,13 @@
     margin-left: 5%;
     margin-right: 20%;
 }
+
+.regc{
+
+  width: 40%;
+
+}
+
 /* You can add global styles to this file, and also import other style files */
 /*.container{
     background-color: antiquewhite;
@@ -43,6 +50,7 @@ input:hover,
   opacity: 1;
 }
 
+
 /* style the submit button */
 input[type=submit] {
     background-color: #04AA6D;
@@ -70,3 +78,4 @@ input[type=submit] {
     clear: both;
   }
 
+  
