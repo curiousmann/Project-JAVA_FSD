@@ -1,6 +1,5 @@
 
 import { Component, OnInit } from '@angular/core';
-import { take } from 'rxjs';
 
 import { Ship } from '../ship';
 import { ShipService } from '../ship.service';
@@ -13,8 +12,9 @@ import { ShipService } from '../ship.service';
 export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
+ 
   }
-
+col:string="red"
   msg:string=""
   name:string=""
   addr:string=""
@@ -37,9 +37,10 @@ today=new Date()
     this.ship.email=this.email
     this.ship.pep=this.peop
     this.ship.god=this.god
-this.service.createShip(this.ship).subscribe(data=>{this.msg=data.type})
- alert("Reservation Successfull") 
+this.service.createShip(this.ship).subscribe(data=>{this.msg=data.type;});
+
       this.ship = new Ship() 
   }
+
 
 }
