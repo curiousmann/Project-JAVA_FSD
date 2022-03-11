@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
   msg:string=""
   name:string=""
   addr:string=""
-  phn:number=0
+  phn:string=""
 email:string=""
 peop:number=0
 god:number=0

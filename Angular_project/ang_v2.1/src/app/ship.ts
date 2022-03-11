@@ -6,7 +6,7 @@ export class Ship {
     empAtt: string=""
     pass: string=""
     userType: string=""
-    phn: number=0
+    phn: string=""
     tskDtl: string=""
     tskSts: boolean=false
     itmInstSts: boolean=false
