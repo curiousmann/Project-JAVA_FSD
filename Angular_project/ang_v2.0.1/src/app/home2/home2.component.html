@@ -1,0 +1,25 @@
+
+    
+<br><br>
+
+     <div class="container">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Login
+          </h3>
+        <div class="row">
+         <form action="#">
+  
+            <div class="col">
+                
+                <p [ngClass]="myClass" style="color: red;">{{msg}}</p>
+                <input type="text" name="userid" placeholder="UserId" required [(ngModel)]="userId" #t1>
+                <input type="password" name="password" placeholder="Password" required [(ngModel)]="password">
+                <input type="submit" value="Login" (click)="checkLogin(t1)">
+              
+        
+            </div>
+       
+        </form>
+    </div>
+    </div>
+
