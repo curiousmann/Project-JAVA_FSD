@@ -14,27 +14,24 @@ export class Home2Component implements OnInit {
   userId:number=0;
   password:string="";
   msg:string="";
-
   myClass:string="";
 
 
-    ship : Ship = new Ship();  
+    ship : Ship = new Ship()
     constructor(private service:ShipService) { } 
     
 
   checkLogin(tx1:any){
     this.service.getOneShip(this.userId).subscribe(data=>{
-      this.ship=data
+
+     this.ship=data
       console.log(this.ship)
   
-      if(this.userId==this.ship.userId&&this.password==this.ship.pass){
-        this.msg="Succesfully Login";
-       // this.status="green"
+      if(this.password==this.ship.pass){
        this.myClass="success"
       }else{
   
-        this.msg="Invalied Login";
-        //this.status="red";
+        this.msg="Invalied User ID or Password";
         this.myClass="fail"
         tx1.focus();
       }
