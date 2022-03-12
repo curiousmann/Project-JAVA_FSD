@@ -1,35 +1,37 @@
-<br><div class="container">
+
+<h5 align="center">{{msg}}</h5>
+<div class="container">
     <h3 align="center">Customer Register</h3>
-    <form action="">
+    <form>
         <table align="center">
             <tr>
-                <td colspan="2"><input type="text" placeholder="Name"></td>
+                <td colspan="2"><input type="text" placeholder="Name" name="name" [(ngModel)]="name"></td>
             </tr>
             <tr>
-                <td colspan="2"><input type="text" placeholder="Address" ></td>
+                <td colspan="2"><input type="text" placeholder="Address" name="addr" [(ngModel)]="addr"></td>
             </tr>
             <tr>
-                <td colspan="2"><input type="number" placeholder="Phone"></td>
+                <td colspan="2"><input type="text" placeholder="Phone" name="phon" [(ngModel)]="phon"></td>
             </tr>
             <tr>
-                <td colspan="2"><input type="email" placeholder="Email" ></td>
+                <td colspan="2"><input type="email" placeholder="Email" name="email" [(ngModel)]="email"></td>
             </tr>
             <tr>
-                <td colspan="2">Select Date and Time : &nbsp;<select name="" id=""></select></td>
-            </tr><br>
+                <td colspan="2">Select Date and Time : <br><select name="" id=""><option>Admin yet to schedule</option></select></td>
+            </tr>
             <tr>
-                <td>Traveller<div class="regc"> <input type="checkbox"></div>
+                <td>Traveller<div class="regc"> <input type="checkbox" id="yourBox" onmousedown="this.form.yourText.disabled=this.checked"/>  </div>
                 </td>
                 
-                <td>Cargo<div class="regc"><input type="checkbox"></div></td>
+                <td>Cargo<div class="regc"><input type="checkbox" id="yourBox2" onmousedown="this.form.yourText2.disabled=this.checked"/></div></td>
             </tr>
             <tr>
-                <td colspan="2"><input type="number" placeholder="No:of Cargo Goods"></td>
+                <td colspan="2"><input type="text" id="yourText" disabled placeholder="No:of Travellers" name="peop" [(ngModel)]="peop"/></td>
             </tr>
-            <tr><td colspan="2"><input type="number" placeholder="No:of Travellers"></td></tr>
-
+            <tr><td colspan="2"><input type="text" id="yourText2" disabled placeholder="No:of Cargo Goods" name="god" [(ngModel)]="god"/></td></tr>
+            
         </table>
-        <input type="submit" value="Register"/>
-      <input type="button" routerLink='/home/home2' value="cancel"/>
+        <input type="submit" value="Register" (click)="submit()" >
+      <input class="can" type="button" routerLink='/home/home2' value="Go Back"/>
     </form>
 </div>

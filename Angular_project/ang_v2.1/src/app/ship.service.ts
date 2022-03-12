@@ -15,13 +15,13 @@ export class ShipService {
   getAllShips():Observable<Ship[]>{ 
     return this.http.get<Ship[]>(`${this.baseUrl}/all`); 
   }  
-  deleteOneShip(id:number):Observable<Message>{ 
+  deleteOneShip(id:String):Observable<Message>{ 
     return this.http.delete<Message>(`${this.baseUrl}/remove/${id}`); 
   }  
   createShip(ship:Ship):Observable<Message>{ 
     return this.http.post<Message>(`${this.baseUrl}/save`,ship); 
   }  
-  getOneShip(id:number):Observable<Ship>{ 
+  getOneShip(id:String):Observable<Ship>{ 
     return this.http.get<Ship>(`${this.baseUrl}/one/${id}`); 
   }  
   updateShip(ship:Ship):Observable<Message>{ 

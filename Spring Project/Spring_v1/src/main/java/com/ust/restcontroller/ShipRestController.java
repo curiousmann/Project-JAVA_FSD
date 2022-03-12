@@ -5,7 +5,8 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired; 
 import org.springframework.http.HttpStatus; 
-import org.springframework.http.ResponseEntity; 
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin; 
 import org.springframework.web.bind.annotation.DeleteMapping; 
 import org.springframework.web.bind.annotation.GetMapping; 
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ust.model.ShipData;
+import com.ust.repo.ShipRepository;
 import com.ust.model.Message;
 
 import com.ust.service.IShipService; 
@@ -25,17 +27,11 @@ import com.ust.service.IShipService;
 @RestController 
 @CrossOrigin(origins = "*") 
 @RequestMapping("/rest/ship") 
-
+@Controller
 public class ShipRestController {
 
 	@Autowired 
 	private IShipService service; 
-
-	/** 
-	 *	1. This method takes Ship object 
-	 *	as input from JSON/XML using  	 
-	 **    @RequestBody and returns  	 *    ResponseEntity<T>. 
-	 *	call service.saveShip(ob)  */ 
 
 	@PostMapping("/save") 
 	public ResponseEntity<Message> saveShip( 

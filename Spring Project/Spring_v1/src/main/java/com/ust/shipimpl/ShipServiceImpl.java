@@ -28,7 +28,7 @@ public class ShipServiceImpl implements IShipService {
 
 	@Override 
 	public Optional<ShipData> getOneShip(Integer id) { 
-		return repo.findById(id); 
+		return repo.findByUserId(id); 
 	} 
 
 	@Override 

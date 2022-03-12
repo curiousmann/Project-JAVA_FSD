@@ -2,6 +2,25 @@
 .doc{
     margin-left: 5%;
     margin-right: 20%;
+
+}
+.tab{
+  
+}
+
+
+.ab{
+  background-color: #d6d2d2;
+  border-radius: 10%;
+}
+
+.selector {
+  background-image: url("./assets/photo5.jpg");
+}
+
+
+input.can{
+  background-color: rgb(255, 143, 143);
 }
 
 .regc{
@@ -78,4 +97,11 @@ input[type=submit] {
     clear: both;
   }
 
+  h5{
+    background-color: white;
+  }
   
+  input.rec{
+    font-weight: 600;
+    background-color: lightgrey;
+  }

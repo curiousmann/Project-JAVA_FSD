@@ -11,35 +11,45 @@ export class Home2Component implements OnInit {
   title = 'login-app';
 
 
-  userId:number=0;
+  userId:string="";
   password:string="";
   msg:string="";
-  myClass:string="";
-
 
     ship : Ship = new Ship()
-    constructor(private service:ShipService) { } 
+    constructor(private router: Router,private service:ShipService,private route: ActivatedRoute) { } 
     
 
   checkLogin(tx1:any){
     this.service.getOneShip(this.userId).subscribe(data=>{
-
-     this.ship=data
       console.log(this.ship)
-  
-      if(this.password==this.ship.pass){
-       this.myClass="success"
-      }else{
-  
-        this.msg="Invalied User ID or Password";
-        this.myClass="fail"
-        tx1.focus();
-      }
+        if(this.password==data.pass){
+          this.ship=data
+         }else{
+     
+           this.msg="Invalied User ID or Password";
+           tx1.focus();
+         }
     })
    
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  onSubmit(){
+    if(this.ship.userId.charAt(0)=='A'){
+      this.router.navigateByUrl('/admin');
+    }
+    else if(this.ship.userId.charAt(0)=='E'){
+      this.router.navigateByUrl('/employye');
+    }
+    else if(this.ship.userId.charAt(0)=='S'){
+      this.router.navigateByUrl('/store');
+    }
+    // else if(this.ship.userId.charAt(0)=='C'){
+    //   this.router.navigateByUrl('/customer');
+    // }
+    else
+    console.log("No UserId Found in Database")
   }
 
 }
