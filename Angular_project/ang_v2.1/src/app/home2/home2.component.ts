@@ -16,7 +16,7 @@ export class Home2Component implements OnInit {
   msg:string="";
 
     ship : Ship = new Ship()
-    constructor(private router: Router,private service:ShipService) { } 
+    constructor(private router: Router,private service:ShipService,private route: ActivatedRoute) { } 
     
 
   checkLogin(tx1:any){

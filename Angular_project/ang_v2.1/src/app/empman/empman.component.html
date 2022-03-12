@@ -1,0 +1,29 @@
+<div class="tab">
+    <table border="1">
+        <tr> 
+        <th>UserID</th>
+        <th>Employee Name</th>
+        <th>EmpAttenance</th>
+        <th>Work</th>
+        <th>Operation</th>
+        
+        </tr>
+        
+        <tr *ngFor="let s of ships">
+        <td>{{s.userId}}</td>
+         <td>{{s.empAtt}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.tskDtl}}</td>
+        <!--<td> 
+             <button class="btn btn-danger" (click)="deleteShip(s.userId)">DELETE</button> 
+                    &nbsp;&nbsp;             
+            <button class="btn btn-info" (click)="editShip(s.userId)">EDIT</button> 
+            </td>  
+    -->
+        </tr> 
+        
+        </table>
+    
+    {{message.message}} 
+    
+    </div>

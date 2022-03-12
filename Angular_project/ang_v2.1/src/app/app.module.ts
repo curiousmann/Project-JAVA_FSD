@@ -14,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
 import { EmployyeComponent } from './employye/employye.component';
 import { StoreComponent } from './store/store.component';
-import { ShippingComponent } from './shipping/shipping.component' 
+import { ShippingComponent } from './shipping/shipping.component';
+import { EmpmanComponent } from './empman/empman.component' 
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ShippingComponent } from './shipping/shipping.component'
     AdminComponent,
     EmployyeComponent,
     StoreComponent,
-    ShippingComponent
+    ShippingComponent,
+    EmpmanComponent
   ],
   imports: [
     BrowserModule,
