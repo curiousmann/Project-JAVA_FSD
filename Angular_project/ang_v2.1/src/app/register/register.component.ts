@@ -18,7 +18,7 @@ col:string="red"
   msg:string=""
   name:string=""
   addr:string=""
-  phn:string=""
+  phon:string=""
 email:string=""
 peop:number=0
 god:number=0
@@ -30,10 +30,9 @@ today=new Date()
 
   submit(){
     this.ship.userId=this.today.getHours().toString()+this.today.getMinutes().toString()+this.today.getSeconds().toString()
-    this.ship.userType="cust"
     this.ship.name=this.name
     this.ship.addr=this.addr
-    this.ship.phn=this.phn
+    this.ship.phon=this.phon
     this.ship.email=this.email
     this.ship.pep=this.peop
     this.ship.god=this.god

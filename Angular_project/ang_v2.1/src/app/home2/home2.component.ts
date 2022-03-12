@@ -14,33 +14,36 @@ export class Home2Component implements OnInit {
   userId:string="";
   password:string="";
   msg:string="";
-  myClass:string="";
+  myClass:boolean=false
 
 
     ship : Ship = new Ship()
-    constructor(private service:ShipService) { } 
+    constructor(private router: Router,private service:ShipService) { } 
     
 
   checkLogin(tx1:any){
     this.service.getOneShip(this.userId).subscribe(data=>{
-
-     this.ship=data
-      console.log(this.ship)
-  
-      if(this.password==this.ship.pass){
-       this.myClass="success"
-      }else{
-  
-        this.msg="Invalied User ID or Password";
-        this.myClass="fail"
-        tx1.focus();
-      }
+        if(this.password==data.pass){
+          this.myClass=true
+          this.ship=data
+         }else{
+     
+           this.msg="Invalied User ID or Password";
+           this.myClass=false
+           tx1.focus();
+         }
     })
    
   }
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void {}
+
+  onSubmit(){
+    if(this.myClass==true){
+      this.router.navigateByUrl('/admin');
+    }
+    else
+    console.log("will not")
   }
 
 }

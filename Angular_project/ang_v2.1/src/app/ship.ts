@@ -5,8 +5,7 @@ export class Ship {
     userId: string=""
     empAtt: string=""
     pass: string=""
-    userType: string=""
-    phn: string=""
+    phon: string=""
     tskDtl: string=""
     tskSts: boolean=false
     itmInstSts: boolean=false
