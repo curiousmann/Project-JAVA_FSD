@@ -16,26 +16,21 @@ export class Home2Component implements OnInit {
   msg:string="";
 
     ship : Ship = new Ship()
-    constructor(private router: Router,private service:ShipService,private route: ActivatedRoute) { } 
+    constructor(private router: Router,private service:ShipService,private route: ActivatedRoute) {
+     } 
     
-
-  checkLogin(tx1:any){
-    this.service.getOneShip(this.userId).subscribe(data=>{
-      console.log(this.ship)
-        if(this.password==data.pass){
-          this.ship=data
-         }else{
-     
-           this.msg="Invalied User ID or Password";
-           tx1.focus();
-         }
-    })
-   
-  }
 
   ngOnInit(): void {}
 
   onSubmit(){
+  
+    this.service.getOneShip(this.userId).subscribe((data)=>{
+        if(this.password==data.pass){
+          this.ship=data
+         }else{
+           this.msg="Invalied User ID or Password";
+         }
+    }).add(() => {
     if(this.ship.userId.charAt(0)=='A'){
       this.router.navigateByUrl('/admin');
     }
@@ -50,6 +45,8 @@ export class Home2Component implements OnInit {
     // }
     else
     console.log("No UserId Found in Database")
+    })
+
   }
 
 }

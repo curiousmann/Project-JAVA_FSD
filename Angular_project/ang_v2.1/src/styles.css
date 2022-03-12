@@ -1,17 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-.doc{
-    margin-left: 5%;
-    margin-right: 20%;
 
-}
-.tab{
-  
-}
 
 
 .ab{
   background-color: #d6d2d2;
-  border-radius: 10%;
+  border-radius: 3%;
+  text-align: center;
 }
 
 .selector {
