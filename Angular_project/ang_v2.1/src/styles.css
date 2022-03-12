@@ -5,14 +5,16 @@
 
 }
 
+
 .ab{
   background-color: #d6d2d2;
   border-radius: 10%;
 }
-body {
+
+.selector {
   background-image: url("./assets/photo5.jpg");
-  background-size: auto;
- }
+}
+
 
 input.can{
   background-color: rgb(255, 143, 143);

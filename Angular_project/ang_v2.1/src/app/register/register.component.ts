@@ -11,9 +11,14 @@ import { ShipService } from '../ship.service';
 })
 export class RegisterComponent implements OnInit {
 
-  ngOnInit(): void {
- 
+  ngOnInit() {
+    document.body.className = "selector";
   }
+
+ngOnDestroy(){
+    document.body.className="";
+  }
+
 col:string="red"
   msg:string=""
   name:string=""

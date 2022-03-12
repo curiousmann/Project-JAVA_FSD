@@ -13,7 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
 import { EmployyeComponent } from './employye/employye.component';
-import { StoreComponent } from './store/store.component' 
+import { StoreComponent } from './store/store.component';
+import { ShippingComponent } from './shipping/shipping.component' 
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { StoreComponent } from './store/store.component'
     RegisterComponent,
     AdminComponent,
     EmployyeComponent,
-    StoreComponent
+    StoreComponent,
+    ShippingComponent
   ],
   imports: [
     BrowserModule,
