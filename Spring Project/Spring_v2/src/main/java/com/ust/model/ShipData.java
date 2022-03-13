@@ -34,7 +34,8 @@ public class ShipData {
  	@Column(length = 50)
  	private String addr; 
 
- 	private String empAtt;
+ 	private Boolean empAtt;
+ 	private Boolean empAtt1;
  	@Column(length = 50)
  	private String tskDtl;
 

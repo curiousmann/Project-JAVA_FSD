@@ -1,0 +1,25 @@
+
+    <body>
+        <h4>Welcome</h4>
+    <div class="table-box">
+            <div class="table-row table-head">
+                <div class="table-cell first-cell">
+                    <p>Task Details</p>
+                </div>
+                <div class="table-cell last-cell">
+                    <p>Tasks Status</p>
+                </div> 
+            </div>
+    
+    
+            <div class="table-row" *ngFor="let s of ships2">
+                <div class="table-cell first-cell">
+                    <p>{{s.tskDtl}}</p>
+                </div>
+                <div class="table-cell last-cell">
+                    <p>{{s.tskSts}}</p>
+                </div>   
+            </div>
+    
+    </div>   
+    </body>

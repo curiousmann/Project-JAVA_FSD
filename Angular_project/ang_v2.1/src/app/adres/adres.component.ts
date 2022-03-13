@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { Message } from '../message';
 import { Ship } from '../ship';
 import { ShipService } from '../ship.service';
 
 @Component({
-  selector: 'app-empman',
-  templateUrl: './empman.component.html',
-  styleUrls: ['./empman.component.css']
+  selector: 'app-adres',
+  templateUrl: './adres.component.html',
+  styleUrls: ['./adres.component.css']
 })
-export class EmpmanComponent implements OnInit {
+export class AdresComponent implements OnInit {
 
-logmn:string=""
   ngOnInit(): void {
   }
   ships: Ship[] = []; 
@@ -22,9 +20,7 @@ logmn:string=""
   constructor(private service:ShipService) {
       this.getAllShips();
   } 
-
-
-
+  
   getAllShips(){
     this.service.getAllShips().subscribe(
     (resp) => {
@@ -32,7 +28,7 @@ logmn:string=""
     this.ships=resp;
     }).add(() => {
       this.ships2=this.ships.filter((e)=>{return e.userId
-        .indexOf('E')==0})
+        .indexOf('C')==0})
       })
     
    // this.ships.find(x => x.userId === )
@@ -42,7 +38,7 @@ logmn:string=""
   // deleteShip(id:number){ 
   //   this.service.deleteOneShip(id).subscribe( 
   //     data=>{         
-  //       this.message2=data,         
+  //       this.message=data,         
   //       this.getAllShips(); 
   //     }, 
   //     error=>{console.log(error)} 
@@ -53,5 +49,4 @@ logmn:string=""
   // } 
 
 
- 
 }

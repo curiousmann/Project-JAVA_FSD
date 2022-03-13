@@ -3,11 +3,19 @@ import { Injectable } from '@angular/core';
 import { Ship } from './ship'; 
 import { Observable } from 'rxjs'; 
 import { Message } from './message'; 
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ShipService {
+
+  private messageSource = new BehaviorSubject<string>("");
+  currentMessage = this.messageSource.asObservable();
+
+  changeMssg(message:string){
+    this.messageSource.next(message)
+  }
 
   private baseUrl : string = 'http://localhost:9898/springboot-crud-rest/rest/ship'
   constructor(private http:HttpClient) { }

@@ -4,15 +4,20 @@
           <div>
             <h2 class="d-inline-block align-text-top">Admin Portal</h2><br>
             <a routerLink="/admin/empman"><b>Employee Management</b> </a>&nbsp;&nbsp;
-            <a href="#"><b>Shipping Management</b> </a>&nbsp;&nbsp;
-            <a href="#"><b>Reservation Details</b></a>&nbsp;&nbsp;
-            <a href="#"><b>Store Management</b></a>&nbsp;&nbsp;
+            <a routerLink="/admin/adship"><b>Shipping Management</b> </a>&nbsp;&nbsp;
+            <a routerLink="/admin/adres"><b>Reservation Details</b></a>&nbsp;&nbsp;
+            <a routerLink="/admin/adsto"><b>Store Management</b></a>&nbsp;&nbsp;
           </div>
         </ul>
       </div>
       <div style="margin-right: 1cm;width:7cm;" >
         <input type="button" value="Generate Report" class="rec">
       </div>
+      <div style="margin-left: auto;">
+        <h6 class="d-inline-block align-text-top">Welcome {{message}}</h6>
+        <a routerLink="/home/home2"><b>Logout</b> </a>
+      </div>
+      
 </nav>
 <router-outlet></router-outlet>
 

@@ -110,14 +110,14 @@ public class ShipRestController {
 	@DeleteMapping("/remove/{id}") 
 	public ResponseEntity<Message> deleteShip( 
 			@PathVariable 
-			Integer id) 
+			String id) 
 	{ 
 		System.out.println("welcome");  	 	
 		ResponseEntity<Message> resp=null; 
 		try { 
-			boolean exist=service.isExist(id); 
+			boolean exist=service.isExist(repo2.findByUserId(id).get().getRegId()); 
 			if(exist) {  	 	 	 	
-				service.deleteShip(id);  	 	 	 	
+				service.deleteShip(repo2.findByUserId(id).get().getRegId());  	 	 	 	
 				resp=new ResponseEntity<Message>
 				(new Message("SUCCESSS",id+"-removed"),HttpStatus.OK); 
 			}else { 

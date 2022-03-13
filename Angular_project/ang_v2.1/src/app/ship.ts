@@ -3,7 +3,8 @@ export class Ship {
     name: string=""
     addr: string=""
     userId: string=""
-    empAtt: string=""
+    empAtt: boolean=false
+    empAtt1: boolean=false
     pass: string=""
     phon: string=""
     tskDtl: string=""

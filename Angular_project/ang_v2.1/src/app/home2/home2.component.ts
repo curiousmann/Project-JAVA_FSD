@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ShipService } from '../ship.service'; import { Ship } from '../ship'; 
+
 @Component({
   selector: 'app-home2',
   templateUrl: './home2.component.html',
@@ -16,8 +17,7 @@ export class Home2Component implements OnInit {
   msg:string="";
 
     ship : Ship = new Ship()
-    constructor(private router: Router,private service:ShipService,private route: ActivatedRoute) {
-     } 
+    constructor(private router: Router,private service:ShipService,private route: ActivatedRoute) {} 
     
 
   ngOnInit(): void {}
@@ -32,7 +32,8 @@ export class Home2Component implements OnInit {
          }
     }).add(() => {
     if(this.ship.userId.charAt(0)=='A'){
-      this.router.navigateByUrl('/admin');
+      this.service.changeMssg(this.ship.name)
+      this.router.navigateByUrl('/admin/empman');
     }
     else if(this.ship.userId.charAt(0)=='E'){
       this.router.navigateByUrl('/employye');

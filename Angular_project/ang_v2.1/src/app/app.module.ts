@@ -15,7 +15,15 @@ import { AdminComponent } from './admin/admin.component';
 import { EmployyeComponent } from './employye/employye.component';
 import { StoreComponent } from './store/store.component';
 import { ShippingComponent } from './shipping/shipping.component';
-import { EmpmanComponent } from './empman/empman.component' 
+import { EmpmanComponent } from './empman/empman.component';
+import { AdshipComponent } from './adship/adship.component';
+import { AdresComponent } from './adres/adres.component';
+import { AdstoComponent } from './adsto/adsto.component';
+import { StpurComponent } from './stpur/stpur.component';
+import { SthisComponent } from './sthis/sthis.component';
+import { EmtimComponent } from './emtim/emtim.component';
+import { EmtskComponent } from './emtsk/emtsk.component';
+import { EmbillComponent } from './embill/embill.component' 
 
 @NgModule({
   declarations: [
@@ -29,7 +37,15 @@ import { EmpmanComponent } from './empman/empman.component'
     EmployyeComponent,
     StoreComponent,
     ShippingComponent,
-    EmpmanComponent
+    EmpmanComponent,
+    AdshipComponent,
+    AdresComponent,
+    AdstoComponent,
+    StpurComponent,
+    SthisComponent,
+    EmtimComponent,
+    EmtskComponent,
+    EmbillComponent
   ],
   imports: [
     BrowserModule,

@@ -1,21 +1,22 @@
 
     <body>
+        <h4>Welcome</h4>
     <div class="table-box">
             <div class="table-row table-head">
                 <div class="table-cell first-cell">
-                    <p>Employee ID</p>
+                    <p>Store ID</p>
                 </div>
                 <div class="table-cell">
-                    <p>Employee Name</p>
+                    <p>Name</p>
                 </div>
                 <div class="table-cell">
-                    <p>Leave Request</p>
+                    <p>Purchase ID</p>
                 </div>
                 <div class="table-cell">
-                    <p>Tasks assigned</p>
+                    <p>Equipment Name</p>
                 </div> 
                 <div class="table-cell last-cell">
-                    <p>Tasks Status</p>
+                    <p>Status</p>
                 </div> 
             </div>
     
@@ -27,15 +28,14 @@
                 <div class="table-cell">
                     <p>{{s.name}}</p>
                 </div>
-                <div class="table-cell"  >
-                    <div *ngIf="s.empAtt==true;else other_content"><p>leave Requested</p></div>
-                    <ng-template #other_content>On work</ng-template>
+                <div class="table-cell">
+                    <p>{{s.pchsId}}</p>
                 </div>
                 <div class="table-cell">
-                    <p>{{s.tskDtl}}</p>
+                    <p>{{s.eqmtNm}}</p>
                 </div>
                 <div class="table-cell last-cell">
-                    <p>{{s.tskSts}}</p>
+                    <p>{{s.itmInstSts}}</p>
                 </div>   
             </div>
     
