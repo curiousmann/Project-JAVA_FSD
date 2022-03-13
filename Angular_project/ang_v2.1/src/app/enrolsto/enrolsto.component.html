@@ -1,0 +1,22 @@
+<br><br>
+
+<div class="container">
+    <h6 align="center">Enter the Stores person details</h6>
+<form (ngSubmit)="submit()">
+     <br><div class="doc2">
+    <input type="text" placeholder="Name" name="name" [(ngModel)]="name" >
+     <br>
+    <input type="text" placeholder="Password" name="Pass" [(ngModel)]="pass">
+       <br>
+   </div>
+   <input type="submit">
+
+</form>
+</div>
+<div class="doc">
+    <div *ngIf="msg=='Reservation Successfull...Please wait';">
+        <p><b> Enrolment Successfull
+        <br>Assigned User ID : {{userid}}</b>
+    </p></div>
+
+</div>

@@ -14,13 +14,16 @@
                 <div class="table-cell">
                     <p>Tasks assigned</p>
                 </div> 
-                <div class="table-cell last-cell">
+                <div class="table-cell">
                     <p>Tasks Status</p>
+                </div> 
+                <div class="table-cell last-cell">
+                    <p>Actions</p>
                 </div> 
             </div>
     
     
-            <div class="table-row" *ngFor="let s of ships2">
+            <div class="table-row" *ngFor="let s of ships2;let i=index">
                 <div class="table-cell first-cell">
                     <p>{{s.userId}}</p>
                 </div>
@@ -28,14 +31,22 @@
                     <p>{{s.name}}</p>
                 </div>
                 <div class="table-cell"  >
-                    <div *ngIf="s.empAtt==true;else other_content"><p>leave Requested</p></div>
+                    <div *ngIf="s.empAtt==true;else other_content"><p>leave Requested</p>
+                        <!-- <button type="submit">Approve</button>&nbsp;&nbsp;
+                        <button type="submit">Reject</button> -->
+                    </div>
                     <ng-template #other_content>On work</ng-template>
                 </div>
                 <div class="table-cell">
                     <p>{{s.tskDtl}}</p>
                 </div>
+                <div class="table-cell">
+                    <div *ngIf="s.tskSts==true;else go_to"><p><img src="../../assets/check.png" style="width:30px;height:30px;"></p></div>
+                    <ng-template #go_to><img src="../../assets/cross9.jpg" style="width:30px;height:30px;"></ng-template>
+                </div>
                 <div class="table-cell last-cell">
-                    <p>{{s.tskSts}}</p>
+
+                    <input type="button" name="" id="" value="Delete" (click)="deleteShip(i)">
                 </div>   
             </div>
     

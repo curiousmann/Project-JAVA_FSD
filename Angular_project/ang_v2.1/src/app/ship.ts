@@ -1,4 +1,5 @@
 export class Ship {
+    regId:number=0
     email: string=""
     name: string=""
     addr: string=""

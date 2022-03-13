@@ -11,6 +11,10 @@ import { EmployyeComponent } from './employye/employye.component';
 import { EmpmanComponent } from './empman/empman.component';
 import { EmtimComponent } from './emtim/emtim.component';
 import { EmtskComponent } from './emtsk/emtsk.component';
+import { EnrolComponent } from './enrol/enrol.component';
+import { EnroladmComponent } from './enroladm/enroladm.component';
+import { EnrolempComponent } from './enrolemp/enrolemp.component';
+import { EnrolstoComponent } from './enrolsto/enrolsto.component';
 import { HomeComponent } from './home/home.component';
 import { Home2Component } from './home2/home2.component';
 import { RegisterComponent } from './register/register.component';
@@ -26,8 +30,13 @@ children:[
   {path:'empman',component:EmpmanComponent},
   {path:'adship',component:AdshipComponent},
   {path:'adres',component:AdresComponent},
-  {path:'adsto',component:AdstoComponent}
-]},
+  {path:'adsto',component:AdstoComponent},
+  {path:'enrol',component:EnrolComponent,children:[
+    {path:'enroladm',component:EnroladmComponent},
+    {path:'enrolemp',component:EnrolempComponent},
+    {path:'enrolsto',component:EnrolstoComponent}
+  ]}
+]},    {path:'shipping',component:ShippingComponent},
   {path:'store',component:StoreComponent,
   children:[
     {path:'stpur',component:StpurComponent},
@@ -44,7 +53,6 @@ children:[
     {path: 'about',component:AboutusComponent},
     {path:'contact',component:ContactusComponent},
     {path:'home2',component:Home2Component},
-    {path:'shipping',component:ShippingComponent}
   ]},{path:'register',component:RegisterComponent}
 ];
 

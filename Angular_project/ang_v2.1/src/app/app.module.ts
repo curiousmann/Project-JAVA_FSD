@@ -23,7 +23,11 @@ import { StpurComponent } from './stpur/stpur.component';
 import { SthisComponent } from './sthis/sthis.component';
 import { EmtimComponent } from './emtim/emtim.component';
 import { EmtskComponent } from './emtsk/emtsk.component';
-import { EmbillComponent } from './embill/embill.component' 
+import { EmbillComponent } from './embill/embill.component';
+import { EnrolComponent } from './enrol/enrol.component';
+import { EnrolempComponent } from './enrolemp/enrolemp.component';
+import { EnrolstoComponent } from './enrolsto/enrolsto.component';
+import { EnroladmComponent } from './enroladm/enroladm.component' 
 
 @NgModule({
   declarations: [
@@ -45,7 +49,11 @@ import { EmbillComponent } from './embill/embill.component'
     SthisComponent,
     EmtimComponent,
     EmtskComponent,
-    EmbillComponent
+    EmbillComponent,
+    EnrolComponent,
+    EnrolempComponent,
+    EnrolstoComponent,
+    EnroladmComponent
   ],
   imports: [
     BrowserModule,

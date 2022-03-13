@@ -12,8 +12,6 @@ import { ShipService } from '../ship.service';
 export class EmpmanComponent implements OnInit {
 
 logmn:string=""
-  ngOnInit(): void {
-  }
   ships: Ship[] = []; 
   ships2: Ship[]=[];
   message2  : Message = new Message(); 
@@ -24,6 +22,9 @@ logmn:string=""
   } 
 
 
+  ngOnInit(): void {
+  
+  }
 
   getAllShips(){
     this.service.getAllShips().subscribe(
@@ -34,20 +35,19 @@ logmn:string=""
       this.ships2=this.ships.filter((e)=>{return e.userId
         .indexOf('E')==0})
       })
-    
-   // this.ships.find(x => x.userId === )
-    
+
     }
   
-  // deleteShip(id:number){ 
-  //   this.service.deleteOneShip(id).subscribe( 
-  //     data=>{         
-  //       this.message2=data,         
-  //       this.getAllShips(); 
-  //     }, 
-  //     error=>{console.log(error)} 
-  //     ); 
-  //      } 
+
+      deleteShip(i:number){ 
+    this.service.deleteOneShip(this.ships2[i].userId).subscribe( 
+      data=>{         
+        this.message2=data,         
+        this.getAllShips(); 
+      }, 
+      error=>{console.log(error)} 
+      ); 
+       } 
   // editShip(id:number){ 
   //   this.router.navigate(['edit',id]); 
   // } 

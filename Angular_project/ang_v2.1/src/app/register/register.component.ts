@@ -1,5 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 import { Ship } from '../ship';
 import { ShipService } from '../ship.service';
@@ -30,7 +32,7 @@ god:number=0
 today=new Date()
 
     ship : Ship = new Ship()
-    constructor(private service:ShipService) { } 
+    constructor(private service:ShipService,private router: Router) { } 
 
 
   submit(){
@@ -42,7 +44,12 @@ today=new Date()
     this.ship.pep=this.peop
     this.ship.god=this.god
     this.ship.pass=this.today.getHours().toString()+this.today.getMinutes().toString()+this.today.getSeconds().toString()
-this.service.createShip(this.ship).subscribe(data=>{this.msg=data.type;});
+this.service.createShip(this.ship).subscribe(data=>{this.msg=data.type;}).add(()=>{
+  if(this.msg!=""){
+    setTimeout(()=>{this.router.navigateByUrl("/shipping") }, 4000)
+    
+  }
+});
 
       this.ship = new Ship() 
   }
