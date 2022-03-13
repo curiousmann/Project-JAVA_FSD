@@ -16,7 +16,8 @@ export class AdresComponent implements OnInit {
   ships2: Ship[]=[];
   message2  : Message = new Message(); 
   ship:Ship = new Ship();
-  
+  sump:number=0
+  sumg:number=0
   constructor(private service:ShipService) {
       this.getAllShips();
   } 
@@ -29,6 +30,11 @@ export class AdresComponent implements OnInit {
     }).add(() => {
       this.ships2=this.ships.filter((e)=>{return e.userId
         .indexOf('C')==0})
+
+this.ships2.forEach(element => {this.sump=this.sump+element.pep;
+  this.sumg=this.sumg+element.god;
+});
+
       })
     
    // this.ships.find(x => x.userId === )

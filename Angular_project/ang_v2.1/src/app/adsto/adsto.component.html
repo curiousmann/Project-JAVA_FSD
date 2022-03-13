@@ -1,14 +1,25 @@
 
+
+
     <body>
+        <div class="container">
+            <h6 align="center">Add Purchase order</h6>
+        <form (ngSubmit)="submit()">
+             <br><div class="doc2">
+            <input type="text" placeholder="Item Name" name="name" [(ngModel)]="name" >
+             <br></div>
+           <input type="submit">
+        
+        </form>
+        </div>
+
+<br><br>
+        
+        <h3 align="center">Purchase Orders</h3>
+ 
     <div class="table-box">
             <div class="table-row table-head">
                 <div class="table-cell first-cell">
-                    <p>Store ID</p>
-                </div>
-                <div class="table-cell">
-                    <p>Name</p>
-                </div>
-                <div class="table-cell">
                     <p>Purchase ID</p>
                 </div>
                 <div class="table-cell">
@@ -20,21 +31,18 @@
             </div>
     
     
-            <div class="table-row" *ngFor="let s of ships2">
+            <div class="table-row" *ngFor="let s of ship2">
                 <div class="table-cell first-cell">
-                    <p>{{s.userId}}</p>
-                </div>
-                <div class="table-cell">
-                    <p>{{s.name}}</p>
-                </div>
-                <div class="table-cell">
-                    <p>{{s.pchsId}}</p>
+                    <p>{{s.prchsId}}</p>
                 </div>
                 <div class="table-cell">
                     <p>{{s.eqmtNm}}</p>
                 </div>
                 <div class="table-cell last-cell">
-                    <p>{{s.itmInstSts}}</p>
+                   
+                    <div *ngIf="s.itmInstSts==true;else go_to"><p><img src="../../assets/check.png" style="width:30px;height:30px;"></p></div>
+                    <ng-template #go_to><img src="../../assets/cross9.jpg" style="width:30px;height:30px;"></ng-template>
+                
                 </div>   
             </div>
     

@@ -1,1 +1,39 @@
-<p>adship works!</p>
+
+    <body>
+        <div class="container">
+            <h6 align="center">Add Shipping</h6>
+        <form (ngSubmit)="submit()">
+             <br><div class="doc2">
+            <input type="text" placeholder="FROM-TO(TIME)" name="name" [(ngModel)]="name" >
+             <br></div>
+           <input type="submit">
+        
+        </form>
+        </div>
+
+<br><br>
+        
+        <h3 align="center">Ongoing Shipment</h3>
+        <div class="table-box">
+                <div class="table-row table-head">
+                    <div class="table-cell first-cell">
+                        <p>Shipping Details</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <p>Delete</p>
+                    </div> 
+                </div>
+        
+        
+                <div class="table-row" *ngFor="let s of message;let i=index">
+                    <div class="table-cell first-cell">
+                        <p><b>{{s}}</b></p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <p><input type="button" value="Delete" (click)="delete(i)"></p>
+                    </div>   
+                </div>
+        
+        </div>   
+        </body>
+    

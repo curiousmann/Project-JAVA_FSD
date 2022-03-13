@@ -6,7 +6,7 @@
      <br><div class="doc2">
     <input type="text" placeholder="Name" name="name" [(ngModel)]="name" >
      <br>
-    <input type="text" placeholder="Password" name="Pass" [(ngModel)]="pass">
+    <input type="password" placeholder="Password" name="Pass" [(ngModel)]="pass">
        <br>
     <input type="text" placeholder="Initial Task details" name="tskDtl" [(ngModel)]="tskDtl">
    <br></div>
@@ -17,7 +17,7 @@
 
 
 <div class="doc">
-    <div *ngIf="msg=='Reservation Successfull...Please wait';">
+    <div *ngIf="msg=='Reservation Successfull';">
         <p><b> Enrolment Successfull
         <br>Assigned User ID : {{userid}}</b>
     </p></div>

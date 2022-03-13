@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Message } from '../message';
 import { Ship } from '../ship';
 import { ShipService } from '../ship.service';
 @Component({
@@ -10,26 +9,26 @@ import { ShipService } from '../ship.service';
 export class AdstoComponent implements OnInit {
 
 
-  ngOnInit(): void {
-  }
+
   ships: Ship[] = []; 
-  ships2: Ship[]=[];
-  message  : Message = new Message(); 
+ship2:Ship[]=[]
   ship:Ship = new Ship();
-  
+  ship3:Ship = new Ship();
+  today=new Date
+  msg:String=""
   constructor(private service:ShipService) {
-      this.getAllShips();
+     this.getAllShips2();
   } 
-  
-  getAllShips(){
+    ngOnInit(): void {
+  }
+  getAllShips2(){     
     this.service.getAllShips().subscribe(
     (resp) => {
-    console.log(resp);
-    this.ships=resp;
+    this.ships=resp; 
     }).add(() => {
-      this.ships2=this.ships.filter((e)=>{return e.userId
-        .indexOf('S')==0})
-      })
+      this.ship2=this.ships.filter((e)=>{return e.prchsId})
+  
+      });
     
    // this.ships.find(x => x.userId === )
     
@@ -47,7 +46,14 @@ export class AdstoComponent implements OnInit {
   // editShip(id:number){ 
   //   this.router.navigate(['edit',id]); 
   // } 
+name:string=""
+submit(){
+  this.ship3 = new Ship();
+  this.ship3.prchsId='P'+this.today.getMinutes().toString()+this.today.getSeconds().toString()
+  this.ship3.eqmtNm=this.name
 
-
+  this.service.createShip(this.ship3).subscribe(data=>{this.msg=data.type;})
+  this.getAllShips2()
+}
  
 }

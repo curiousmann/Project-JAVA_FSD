@@ -17,7 +17,7 @@
                 <td colspan="2"><input type="email" placeholder="Email" name="email" [(ngModel)]="email"></td>
             </tr>
             <tr>
-                <td colspan="2">Select Date and Time : <br><select name="" id=""><option>Admin yet to schedule</option></select></td>
+                <td colspan="2">Select Date and Time : <br><select name="" id=""><option *ngFor="let s of message">{{s}}</option></select></td>
             </tr>
             <tr>
                 <td>Traveller<div class="regc"> <input type="checkbox" id="yourBox" onmousedown="this.form.yourText.disabled=this.checked"/>  </div>

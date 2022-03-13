@@ -17,6 +17,20 @@ export class ShipService {
     this.messageSource.next(message)
   }
 
+  private messageSource2 = new BehaviorSubject<string[]>([]);
+  currentMessage2 = this.messageSource2.asObservable();
+
+  changeMssg2(message:string[]){
+    this.messageSource2.next(message)
+  }
+
+  private messageSource3 = new BehaviorSubject<Ship>(new Ship());
+  currentMessage3 = this.messageSource3.asObservable();
+
+  changeMssg3(message:Ship){
+    this.messageSource3.next(message)
+  }
+
   private baseUrl : string = 'http://localhost:9898/springboot-crud-rest/rest/ship'
   constructor(private http:HttpClient) { }
 

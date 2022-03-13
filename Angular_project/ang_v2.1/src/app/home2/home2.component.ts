@@ -36,9 +36,11 @@ export class Home2Component implements OnInit {
       this.router.navigateByUrl('/admin/empman');
     }
     else if(this.ship.userId.charAt(0)=='E'){
+      this.service.changeMssg(this.ship.name)
       this.router.navigateByUrl('/employye');
     }
     else if(this.ship.userId.charAt(0)=='S'){
+      this.service.changeMssg(this.ship.name)
       this.router.navigateByUrl('/store');
     }
     // else if(this.ship.userId.charAt(0)=='C'){

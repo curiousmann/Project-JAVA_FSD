@@ -13,8 +13,10 @@ import { ShipService } from '../ship.service';
 })
 export class RegisterComponent implements OnInit {
 
+  message:string[]=[];
   ngOnInit() {
     document.body.className = "selector";
+    this.service.currentMessage2.subscribe(message=>this.message=message)
   }
 
 ngOnDestroy(){
@@ -44,12 +46,14 @@ today=new Date()
     this.ship.pep=this.peop
     this.ship.god=this.god
     this.ship.pass=this.today.getHours().toString()+this.today.getMinutes().toString()+this.today.getSeconds().toString()
-this.service.createShip(this.ship).subscribe(data=>{this.msg=data.type;}).add(()=>{
-  if(this.msg!=""){
-    setTimeout(()=>{this.router.navigateByUrl("/shipping") }, 4000)
+this.service.createShip(this.ship).subscribe(data=>{this.msg=data.type;})
+// .add(()=>{
+//   if(this.msg!=""){
+//     this.service.changeMssg3(this.ship)
+//     setTimeout(()=>{this.router.navigateByUrl("/shipping") }, 4000)
     
-  }
-});
+//   }
+// });
 
       this.ship = new Ship() 
   }
