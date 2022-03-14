@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'demo-routing';
+  title = 'Ship-Management-System';
   constructor(private router: Router) {}
   ngOnInit() {this.router.navigate(['/home/home2']) } 
 }

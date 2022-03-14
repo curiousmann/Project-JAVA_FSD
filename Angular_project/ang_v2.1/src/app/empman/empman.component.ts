@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Message } from '../message';
 import { Ship } from '../ship';
@@ -13,10 +13,10 @@ export class EmpmanComponent implements OnInit {
 
 logmn:string=""
   ships: Ship[] = []; 
-  ships2: Ship[]=[];
+  @Input() ships2: Ship[]=[];
   message2  : Message = new Message(); 
   ship:Ship = new Ship();
-  
+
   constructor(private service:ShipService) {
       this.getAllShips();
   } 
