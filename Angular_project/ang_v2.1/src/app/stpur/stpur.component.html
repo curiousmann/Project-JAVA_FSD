@@ -1,1 +1,38 @@
-<p>stpur works!</p>
+
+    <body>
+        <div class="table-box">
+                <div class="table-row table-head">
+                    <div class="table-cell first-cell">
+                        <p>Purchase Order ID</p>
+                    </div>
+                    <div class="table-cell">
+                        <p>Equipment Name</p>
+                    </div>
+                    <div class="table-cell">
+                        <p>Equipment Price</p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <p>Installation Status</p>
+                    </div> 
+                </div>
+        
+        
+                <div class="table-row" *ngFor="let s of ships2;let i = index">
+                    <div class="table-cell first-cell">
+                        <p>{{s.prchsId}}</p>
+                    </div>
+                    <div class="table-cell">
+                        <p>{{s.eqmtNm}}</p>
+                    </div>
+                    <div class="table-cell">
+                        <p><input type="number" value="Price in Rupees" name="price" [(ngModel)]="price" ()></p>
+                    </div>
+                    <div class="table-cell last-cell">
+                        <div *ngIf="message3.type=='';else go2"><p><input type="button" value="Close" (click)="done(i)"></p></div>
+                        <ng-template #go2>Work Done</ng-template>
+                    </div>   
+                </div>
+        
+        </div>   
+        </body>
+    

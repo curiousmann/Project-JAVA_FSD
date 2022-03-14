@@ -50,6 +50,7 @@ name:string=""
 submit(){
   this.ship3 = new Ship();
   this.ship3.prchsId='P'+this.today.getMinutes().toString()+this.today.getSeconds().toString()
+  this.ship3.userId=this.ship3.prchsId
   this.ship3.eqmtNm=this.name
 
   this.service.createShip(this.ship3).subscribe(data=>{this.msg=data.type;})
