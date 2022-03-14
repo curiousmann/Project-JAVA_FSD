@@ -11,18 +11,22 @@ import { ShipService } from '../ship.service';
 export class EmtskComponent implements OnInit {
 
  
-
+  message2:string="";
   ngOnInit(): void {
+    this.service.currentMessage.subscribe(message=>this.message2=message)
   }
 
   ships: Ship[] = []; 
   ships2: Ship[]=[];
   message  : Message = new Message(); 
+  message3  : Message = new Message(); 
   ship:Ship = new Ship();
   
   constructor(private service:ShipService) {
       this.getAllShips();
   } 
+
+
   
   getAllShips(){
     this.service.getAllShips().subscribe(
@@ -30,8 +34,8 @@ export class EmtskComponent implements OnInit {
     console.log(resp);
     this.ships=resp;
     }).add(() => {
-      this.ships2=this.ships.filter((e)=>{return e.userId
-        .indexOf('E')==0})
+      this.ships2=this.ships.filter((e)=>{return e.name
+        .indexOf(this.message2)>=0})
       })
     
    // this.ships.find(x => x.userId === )
@@ -47,9 +51,23 @@ export class EmtskComponent implements OnInit {
   //     error=>{console.log(error)} 
   //     ); 
   //      } 
-  // editShip(id:number){ 
-  //   this.router.navigate(['edit',id]); 
-  // } 
+  request(id:number){ 
+this.ships2[id].empAtt=true
+    this.service.updateShip(this.ships2[id]).subscribe(
+      (resp) => {
+      console.log(resp);
+      this.message=resp;
+      })
+  } 
+
+  done(id:number){
+    this.ships2[id].tskSts=true
+    this.service.updateShip(this.ships2[id]).subscribe(
+      (resp) => {
+      console.log(resp);
+      this.message3=resp;
+      })
+  }
 
 
 }
