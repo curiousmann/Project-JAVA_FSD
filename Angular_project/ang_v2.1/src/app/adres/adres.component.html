@@ -1,7 +1,11 @@
 
-    <body>
+    <body>        <div style="margin-right: 1cm;width:7cm;" align=center>
+            <input type="button" value="Generate Report" class="rec" (click)="makePdf()">
+          </div>
         <h4 align="center"><b> Total People for travelling : {{sump}}&nbsp;&nbsp;&nbsp;&nbsp;Total Cargo goods : {{sumg}}</b></h4>
-    <div class="table-box">
+    <br><h5 align="center"><u>Reservation Chart</u> </h5>
+        <div class="table-box"  id="pdfTable" #pdfTable>
+
             <div class="table-row table-head">
                 <div class="table-cell first-cell">
                     <p>Customer ID</p>

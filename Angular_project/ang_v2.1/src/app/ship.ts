@@ -13,7 +13,7 @@ export class Ship {
     itmInstSts: boolean=false
     eqmtNm: string=""
     itmPrc: number=0
-    prchsId: String=""
+    prchsId: string=""
     pep:number=0
     god:number=0
 }

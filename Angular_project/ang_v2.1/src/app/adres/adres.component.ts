@@ -1,8 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Message } from '../message';
 import { Ship } from '../ship';
 import { ShipService } from '../ship.service';
 
+import * as pdfMake from "pdfmake/build/pdfmake";
+import * as pdfFonts from "pdfmake/build/vfs_fonts";
+declare var require: any;
+const htmlToPdfmake = require("html-to-pdfmake");
+(pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
 @Component({
   selector: 'app-adres',
   templateUrl: './adres.component.html',
@@ -18,6 +23,24 @@ export class AdresComponent implements OnInit {
   ship:Ship = new Ship();
   sump:number=0
   sumg:number=0
+
+
+ 
+  @ViewChild('pdfTable')
+  pdfTable!: ElementRef;
+  
+  public makePdf() {
+    const pdfTable = this.pdfTable.nativeElement;
+    var html = htmlToPdfmake(pdfTable.innerHTML);
+    const documentDefinition = { content: html };
+    pdfMake.createPdf(documentDefinition).download('customer details.pdf'); 
+     
+  }
+
+
+
+
+
   constructor(private service:ShipService) {
       this.getAllShips();
   } 
@@ -52,7 +75,6 @@ this.ships2.forEach(element => {this.sump=this.sump+element.pep;
   //      } 
   // editShip(id:number){ 
   //   this.router.navigate(['edit',id]); 
-  // } 
 
 
 }

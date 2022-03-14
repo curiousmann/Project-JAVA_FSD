@@ -9,6 +9,8 @@ import { ShipService } from '../ship.service';
 export class AdstoComponent implements OnInit {
 
 
+    ngOnInit(): void {
+  }
 
   ships: Ship[] = []; 
 ship2:Ship[]=[]
@@ -19,8 +21,20 @@ ship2:Ship[]=[]
   constructor(private service:ShipService) {
      this.getAllShips2();
   } 
-    ngOnInit(): void {
+
+
+  name:string=""
+  submit(){
+    this.ship3 = new Ship();
+    this.ship3.prchsId='P'+this.today.getMinutes().toString()+this.today.getSeconds().toString()
+    this.ship3.userId=this.ship3.prchsId
+    this.ship3.eqmtNm=this.name
+  
+    this.service.createShip(this.ship3).subscribe(data=>{this.msg=data.type;})
+    this.getAllShips2()
   }
+
+
   getAllShips2(){     
     this.service.getAllShips().subscribe(
     (resp) => {
@@ -46,14 +60,6 @@ ship2:Ship[]=[]
   // editShip(id:number){ 
   //   this.router.navigate(['edit',id]); 
   // } 
-name:string=""
-submit(){
-  this.ship3 = new Ship();
-  this.ship3.prchsId='P'+this.today.getMinutes().toString()+this.today.getSeconds().toString()
-  this.ship3.eqmtNm=this.name
 
-  this.service.createShip(this.ship3).subscribe(data=>{this.msg=data.type;})
-  this.getAllShips2()
-}
  
 }
