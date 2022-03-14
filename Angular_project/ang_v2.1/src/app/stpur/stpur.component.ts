@@ -33,8 +33,10 @@ export class StpurComponent implements OnInit {
       console.log(resp);
       this.ships=resp;
       }).add(() => {
+      
         this.ships2=this.ships.filter((e)=>{return e.userId
-          .indexOf('P')>=0})
+          .indexOf('P')>=0}); 
+           console.log(this.ships2)
         })
       
      // this.ships.find(x => x.userId === )
