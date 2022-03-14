@@ -20,7 +20,7 @@ export class StpurComponent implements OnInit {
     message  : Message = new Message(); 
     message3  : Message = new Message(); 
     ship:Ship = new Ship();
-    price:number=0
+    price:number[]=[]
     constructor(private service:ShipService) {
         this.getAllShips();
     } 
@@ -55,7 +55,7 @@ export class StpurComponent implements OnInit {
 
     done(id:number){
       this.ships2[id].itmInstSts=true
-      this.ships2[id].itmPrc=this.price
+      this.ships2[id].itmPrc=this.price[id]
       this.service.updateShip(this.ships2[id]).subscribe(
         (resp) => {
         console.log(resp);

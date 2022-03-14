@@ -25,7 +25,7 @@
                         <p>{{s.eqmtNm}}</p>
                     </div>
                     <div class="table-cell">
-                        <input type="number" value="Price in Rupees" name="price" [(ngModel)]="price">
+                        <input type="number" value="Price in Rupees" name="price" [(ngModel)]="price[i]">
                     </div>
                     <div class="table-cell last-cell">
                         <div *ngIf="message3.type=='';else go2"><input type="button" value="Close" (click)="done(i)"></div>
